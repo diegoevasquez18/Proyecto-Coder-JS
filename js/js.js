@@ -10,31 +10,31 @@ const puntosCombatesP = 89;
 const equipo = (a, b) => (a + b) / 4;
 
 let seleccion = prompt(
-  "BIENVENIDO, elija su equipo para calcular su promedio de victoria : \n Seleccionar equipo 1 (Mortal Kombat + Marvel) \n Seleccionar equipo 2 (Mario Smash + Street Fighter) \n Seleccionar equipo 3 (DB FighterZ + Naruto Shippuden UNS4) \n Seleccionar equipo 4 (The King of Fighters + Pokemon)"
+  "BIENVENIDO, elija su equipo para calcular su promedio de victoria : \n Seleccionar equipo 1 (Mortal Kombat + Marvel) \n Seleccionar equipo 2 (Mario Smash + Street Fighter) \n Seleccionar equipo 3 (DB FighterZ + Naruto Shippuden UNS4) \n Seleccionar equipo 4 (The King of Fighters + Pokemon) \n (PARA MAS DETALLES REVISAR CONSOLA)" 
 );
 switch (seleccion) {
   case "1":
     alert(
       "Selecciono 1er equipo. Su promedio de victoria es " +
-        equipo(puntosCombatesMK, puntosCombatesM)
+        equipo(puntosCombatesMK, puntosCombatesM) + "\n (PARA MAS DETALLES REVISAR CONSOLA)"
     );
     break;
   case "2":
     alert(
       "Selecciono 2do equipo. Su promedio de victoria es " +
-        equipo(puntosCombatesMS, puntosCombatesSF)
+        equipo(puntosCombatesMS, puntosCombatesSF) + "\n (PARA MAS DETALLES REVISAR CONSOLA)"
     );
     break;
   case "3":
     alert(
       "Selecciono 3ro equipo. Su promedio de victoria es " +
-        equipo(puntosCombatesDBZ, puntosCombatesNS)
+        equipo(puntosCombatesDBZ, puntosCombatesNS) + "\n (PARA MAS DETALLES REVISAR CONSOLA)"
     );
     break;
   case "4":
     alert(
       "Selecciono 4to equipo. Su promedio de victoria es " +
-        equipo(puntosCombatesKOF, puntosCombatesP)
+        equipo(puntosCombatesKOF, puntosCombatesP) + "\n (PARA MAS DETALLES REVISAR CONSOLA)"
     );
     break;
   default:
@@ -49,8 +49,6 @@ let mortalK = [
 
 mortalK.push({ id: 3, Name: "Raiden", Type: "Range", PC: 32 });
 
-console.log(mortalK);
-
 let marioSmash = [
   { id: 4, Name: "Mario", Type: "Melee", PC: 32 },
   { id: 5, Name: "Luigi", Type: "Melee", PC: 24 },
@@ -59,8 +57,7 @@ let marioSmash = [
 ];
 
 marioSmash.pop();
-console.log(marioSmash);
-//id: 9, Name: , Type: , PC:
+
 let dragonBall = [
   { id: 8, Name: "Goku", Type: "Melee", PC: 35 },
   { id: 9, Name: "Vegeta", Type: "Melee", PC: 32 },
