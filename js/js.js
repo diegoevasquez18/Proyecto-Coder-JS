@@ -80,7 +80,7 @@ let stretFighter = [
 ];
 
 let marvel = [
-  { id: 17, Name: "Spider-Man", Type: "Range", PC: 225 },
+  { id: 17, Name: "Spider-Man", Type: "Range", PC: 25 },
   { id: 18, Name: "Thanos", Type: "Melee", PC: 31 },
   { id: 19, Name: "Tormenta", Type: "Range", PC: 28 },
 ];
@@ -102,6 +102,15 @@ let pokemon = [
 
 pokemon.splice(2,3)
 
-const miEquipo = mortalK.concat(pokemon);
 
-console.log(miEquipo);
+const miEquipo = mortalK.concat(marvel);
+console.log("Equipo 1 ", miEquipo);
+
+const miEquipo2 = marioSmash.concat(stretFighter);
+console.log("Equipo 2 ", miEquipo2);
+
+const miEquipo3 = dragonBall.concat(narutoStorm);
+console.log("Equipo 3 ", miEquipo3);
+
+const miEquipo4 = kingOf.concat(pokemon);
+console.log("Equipo 4 ", miEquipo4);
