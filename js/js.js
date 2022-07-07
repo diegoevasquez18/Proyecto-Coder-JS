@@ -1,4 +1,4 @@
-const puntosCombatesMK = 89;
+/*const puntosCombatesMK = 89;
 const puntosCombatesMS = 86;
 const puntosCombatesDBZ = 92;
 const puntosCombatesKOF = 87;
@@ -111,3 +111,7 @@ console.log("Equipo 3 ", miEquipo3);
 
 const miEquipo4 = kingOf.concat(pokemon);
 console.log("Equipo 4 ", miEquipo4);
+
+const totalEquipos = mortalK.concat(marioSmash, dragonBall, kingOf, stretFighter, marvel, narutoStorm, pokemon);
+
+console.log(totalEquipos);*/

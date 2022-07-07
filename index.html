@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,33 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Metaverse Fight</title>
 </head>
-<body>
-    <h1>Metaverse Fight</h1>
-    <div>
-        <h2>Eliga su duo de pelea(se agrupan por color)</h2>
-        <p>Recuerde que cada universo tiene sus puntos de combate(PC), a mayor PC, mas probabilidades de ganar.</p>
-    </div>
 
-    <div>
-        <p class="red">Universo Mortal Kombat ----> PC=89</p>
-        <p class="blue">Universo Mario Smash ----> PC=86</p>
-        <p class="green">Universo DB FighterZ ----> PC=92</p>
-        <p class="violet">Universo The King of Fighters ----> PC=87</p>
-        <p class="blue">Universo Street Fighter ----> PC=88</p>
-        <p class="red">Universo Marvel ----> PC=84</p>
-        <p class="green">Universo Naruto Shippuden: UNS4 ----> PC=86</p>
-        <p class="violet">Universo Pokemon ----> PC=89</p>
+<body>
+    <header class="titulo">
+        <h1>Metaverse Fight</h1>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="equipos.html">Equipos</a></li>
+            <li><a href="notasparche.html">Notas</a></li>
+        </ul>
+    </nav>
+    <br>
+    <div class="container">
+        <section class="noticias">
+            <div class="noticiaUno">
+                <h2>ESTA LLEGANDO!</h2>
+                <p>Nuevo set de pelea "League Of Legends"</p>
+            <picture>
+                <source srcset="ekkolol.jpg" media="screen and (min-width:600px)">
+                <img class="lol" src="img/lol-noticia.jpg" alt="Personaje">
+            </picture>
+                <p>League of Legends viene para quedarse. Con Darius, Katarina, Ekko y Ahri las batallas del multiverso seran aun mas epicas!</p>
+            </div>
+        </section>
     </div>
-    <p>Tenga presente que el juego se actualiza y pueden variar los PC en cada parche.</p>
     <script src="js/js.js"></script>
 </body>
+
 </html>

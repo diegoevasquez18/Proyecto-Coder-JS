@@ -1,12 +1,44 @@
-.red{
-    color: red;
+.titulo{
+    text-align: center;
 }
-.blue{
-    color: blue;
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
-.green{
-    color: green;
+
+li {
+    float: left;
 }
-.violet{
-    color: rgb(238, 130, 238);
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
+
+li a:hover {
+    background-color: #111;
+}
+
+.container{
+    margin: 1px;
+}
+
+@media screen and (max-width: 600px){
+body{
+    margin: 5px;
+}
+.lol{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+}
+
