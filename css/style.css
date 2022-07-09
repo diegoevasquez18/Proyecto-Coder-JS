@@ -1,113 +1,294 @@
-div.imagenEncabezado{
-    background-image: url(/img/portadaMV.jpg);
-    width: 100%;
-    height: 25vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    object-fit: contain;
-    opacity: 0.6;
-}
-.titulo{
-    text-align: center;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 239, 239);
-    text-shadow: 7px 4px 5px rgb(12, 12, 39);
-}
-h1{
-    font-size: 80px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
+body {
     background-color: #111;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-    margin: 1px;
+@media screen and (max-width: 600px) {
+    body {
+        margin: 5px;
+        background-color: rgb(68, 99, 70);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .imagenEncabezado {
+        background-image: url(/img/portadaMV.jpg);
+        padding: 30px;
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+    }
+
+    .imagenEncabezado:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .titulo {
+        font-size: 20px;
+        color: rgb(199, 216, 228);
+        position: relative
+    }
+
+    .lol {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 13px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+
+
+    .publicidad {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    img.publicidad {
+        max-width: 100%;
+        max-height: 10%;
+    }
+
+    .pie {
+        text-align: center;
+        background-color: rgb(9, 9, 73);
+    }
+
+    .pie h4 {
+        color: aliceblue;
+        font-size: 10px;
+    }
 }
 
-@media screen and (max-width: 600px){
-body{
-    margin: 5px;
-}
-div.imagenEncabezado{
-    background-image: url(/img/portadaMV.jpg);
-    width: 100%;
-    height: 15vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    object-fit: contain;
-    opacity: 0.6;
-}
-.titulo{
-    text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(5, 2, 2);
-    text-shadow: 7px 4px 5px rgb(12, 12, 39);
-}
-h1{
-    font-size: 15px;
+@media screen and (max-width: 1020px) {
+    body {
+        margin: 5px;
+        background-color: rgb(168, 20, 20);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
 
-}
-.lol{
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display:flex;
-    justify-content: center;
-}
+    .imagenEncabezado {
+        background-image: url(/img/portadaMV.jpg);
+        padding: 30px;
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
 
-li {
-    float: left;
-}
+    }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+    .imagenEncabezado:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
 
-li a:hover {
-    background-color: #111;
-}
+    .titulo {
+        font-size: 20px;
+        color: rgb(199, 216, 228);
+        position: relative
+    }
 
-}
+    .lol {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
 
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 13px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111;
+    }
+
+
+    .publicidad {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+
+
+    }
+
+    img.publicidad {
+        max-width: 100%;
+        max-height: 10%;
+    }
+
+    .pie {
+        text-align: center;
+        background-color: rgb(9, 9, 73);
+    }
+
+    .pie h4 {
+        color: aliceblue;
+        font-size: 10px;
+
+    }
+}
+@media only screen and (min-width: 1020px){
+    .imagenEncabezado {
+        background-image: url(/img/portadaMV.jpg);
+        padding: 70px 10px;
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    
+    }
+    
+    .imagenEncabezado::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .titulo {
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+        position: relative
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    li a:hover {
+        background-color: #111;
+    }
+    
+    .noticias {
+        margin: 2px;
+        display: flex;
+        justify-content: space-around;
+        border: 2px solid rgb(214, 205, 205);
+        border-radius: 14px;
+        padding: 5px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.801)), url(/img/contenido.JPG);
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .noticiaUno {
+        width: 600px;
+        border: 2px solid rgba(235, 231, 231, 0.212);
+        border-radius: 12px;
+        padding: 5px;
+        position: relative;
+        color: white;
+    }
+    
+    .noticiaDos {
+        width: 665px;
+        border: 2px solid rgb(235, 231, 231, 0.212);
+        border-radius: 12px;
+        padding: 5px;
+        position: relative;
+    }
+    
+    h2 {
+        color: aliceblue;
+    }
+    
+    p {
+        color: aliceblue;
+    }
+    
+    .lol {
+        width: 100%;
+    }
+    .coca {
+        height:200px;
+        object-fit: contain;
+       }
+    .publicidad{
+        width: 100%; 
+        max-height: 100%; 
+      
+    }
+    footer{
+        background-color: blue;
+        text-align: center;
+    }
+}
