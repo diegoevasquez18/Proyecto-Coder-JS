@@ -41,7 +41,7 @@ switch (seleccion) {
     alert("No encontrado.");
     break;
 }
-
+*/
 let mortalK = [
   { id: 1, Name: "Scorpion", Type: "Range", PC: 27 },
   { id: 2, Name: "Sub Zero", Type: "Melee", PC: 30 },
@@ -114,4 +114,4 @@ console.log("Equipo 4 ", miEquipo4);
 
 const totalEquipos = mortalK.concat(marioSmash, dragonBall, kingOf, stretFighter, marvel, narutoStorm, pokemon);
 
-console.log(totalEquipos);*/
+console.log(totalEquipos);
