@@ -48,20 +48,6 @@ console.log(campeonesMF);
 
 localStorage.setItem('campeonesMF', JSON.stringify(campeonesMF));
 
-/*
-let seleccion = parseInt(prompt("Ingrese su estilo de juego favorito"));
-if(seleccion === 1){
-    alert("Su estilo seleccionado es Range");
-    
-}
-else if(seleccion === 2){
-    alert("Su estilo seleccionado es Melee")
-}
-else{
-    alert("Su campeon no se encuentra disponible")
-}
-*/
-
 
 function filtrado(player, type){
     return filtrar = player.filter((campeon)=> campeon.type == (type));
@@ -69,36 +55,18 @@ function filtrado(player, type){
 function listaCampeones(campeonesMF){
     let salida = '';
     for (const campeon of campeonesMF){
-        salida += campeon.game +", " + campeon.id +", " +campeon.name +", "+ campeon.type + '\n';
+        salida +=  campeon.game + ": " +campeon.name +".Tipo: " +campeon.type + '\n';
         console.log();
     }
     return salida;
 }
-for(let i = 0; i <26; i++){
-    let filtro = filtrado(campeonesMF, prompt("Elija su tipo de camepon escribiendo "+"Range" + " si es de rango y "+"Melee"+ " si es de cuerpo a cuerpoo"));
+for(let i = 0; i <campeonesMF.length; i++){
+    let filtro = filtrado(campeonesMF, prompt("Elija su tipo de camepon escribiendo 'Range', si es de rango y 'Melee' si es de cuerpo a cuerpoo"));
     if (filtro.length > 0) {
         alert(listaCampeones(filtro));
     } else {
-        alert('No existe camepon');
+        alert('No existe tipo de combate');
     }
     break;
-}
-
-
-let tienda = localStorage.getItem("campeonesMF");
-if (tienda != null){
-    let array = JSON.parse(tienda);
-    let salida = "Seleccionar entre los campones rango/melee segun haya escogido antes"
-    for(let i = 0; i<array.length; i++){
-        //salida += i + ' -> ' + array[i].game + ' ' + array[i].id + ' ' + array[i].name + + ' ' + array[i].type + ' ' + array[i].pc + '\n';
-        salida += array[i].name + array[i].id + "\n";
-    }
-   alert(salida);
-    let eleccion = parseInt(prompt('Eliga su campeon'));
-    if ((eleccion >= 0) && (eleccion < array.length)) {
-        alert("Campeon seleccionado " + array[eleccion].name)
-    } else {
-        alert("ERROR DE SELECCION");
-    }
 }
 
