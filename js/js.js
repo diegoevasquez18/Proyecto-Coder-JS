@@ -83,13 +83,13 @@ let marvel = [
 ];
 
 let narutoStorm = [
-  { id: 20, Name: "Naruto", Type: "Melee", Pc: 29 },
+  { id: 20, Name: "Naruto", Type: "Melee", PC: 29 },
   { id: 21, Name: "Sasuke", Type: "Melee", PC: 30 },
   { id: 22, Name: "Kakashi", Type: "Range", PC: 27 },
 ];
 
 let pokemon = [
-  { id: 23, Name: "Bulbasaur", Type: "Range", Pc: 27 },
+  { id: 23, Name: "Bulbasaur", Type: "Range", PC: 27 },
   { id: 24, Name: "Squirtle", Type: "Range", PC: 30 },
   { id: 25, Name: "Charmander", Type: "Melee", PC: 32 },
   { id: 25, Name: "Sprigatito", Type: "Melee", PC: 30 },
@@ -100,7 +100,7 @@ let pokemon = [
 pokemon.splice(2,3)
 
 
-const miEquipo = mortalK.concat(marvel);
+/*const miEquipo = mortalK.concat(marvel);
 console.log("Equipo 1 ", miEquipo);
 
 const miEquipo2 = marioSmash.concat(stretFighter);
@@ -111,7 +111,7 @@ console.log("Equipo 3 ", miEquipo3);
 
 const miEquipo4 = kingOf.concat(pokemon);
 console.log("Equipo 4 ", miEquipo4);
-
+*/
 const totalEquipos = mortalK.concat(marioSmash, dragonBall, kingOf, stretFighter, marvel, narutoStorm, pokemon);
 
 console.log(totalEquipos);

@@ -3,10 +3,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 699px) {
     body {
         margin: 5px;
-        background-color: rgb(68, 99, 70);
+        background-color: rgb(167, 202, 170);
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
@@ -136,7 +136,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1020px) {
+@media only screen and (min-width: 700px) {
     body {
         margin: 5px;
         background-color: rgb(167, 149, 149);
@@ -272,7 +272,7 @@ body {
     }
 
 }
-@media only screen and (min-width: 1020px){
+@media  screen and (min-width: 1023px){
     .imagenEncabezado {
         background-image: url(/img/portadaMV.jpg);
         padding: 70px 10px;
@@ -323,36 +323,48 @@ body {
     li a:hover {
         background-color: #111;
     }
-    
+
     .noticias {
-        margin: 2px;
-        display: flex;
-        justify-content: space-around;
+        margin: 3px;
         border: 2px solid rgb(214, 205, 205);
         border-radius: 14px;
-        padding: 5px;
+        width: 100%;
+        height: 100%;
         background-image: linear-gradient(rgba(0, 0, 0, 0.904), rgba(0, 0, 0, 0.801)), url(/img/contenido.JPG);
-        height: 50%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+        object-fit: contain;
+        display: flex;
+    }.container{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        display: flex;
     }
-    .noticiaUno {
-        width: 600px;
-        border: 2px solid rgba(235, 231, 231, 0.212);
-        border-radius: 12px;
-        padding: 5px;
-        position: relative;
-        color: white;
+    .noticias::after{
+        content: "";
+        display: table;
+        clear: both;
     }
-    
-    .noticiaDos {
-        width: 665px;
-        border: 2px solid rgb(235, 231, 231, 0.212);
-        border-radius: 12px;
-        padding: 5px;
-        position: relative;
+    .noticiaUno{
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 110%;
+        
+    }
+    .noticiaDos{
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 100%;
+        
+    }
+    .lol{
+        width: 1px;
+        height: 300px;
     }
     
     h2 {
@@ -367,13 +379,14 @@ body {
         width: 100%;
     }
     .coca {
-        height:200px;
-        object-fit: contain;
+        width: 30%;
+        height: 150%;
+        justify-content: center;
+
        }
     .publicidad{
-        width: 100%; 
-        max-height: 100%; 
-      
+        object-fit: contain;
+        justify-content: center;
     }
     footer{
         background-color: blue;
@@ -424,6 +437,7 @@ body {
         padding-right: 15px;
         }
         .publiCoca2{
-            width: 300px;
+            width: 100px;
+            height: 100px;
         }
     }
