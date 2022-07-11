@@ -1,3 +1,5 @@
+alert("Buenas! Dirigase a la pestaña Equipos");
+
 /*const puntosCombatesMK = 89;
 const puntosCombatesMS = 86;
 const puntosCombatesDBZ = 92;
