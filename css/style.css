@@ -365,11 +365,173 @@ body {
         
     }
     h2 {
-        color: aliceblue;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin: 10px;
     }
     
     p {
-        color: aliceblue;
+        color: rgb(2, 5, 7);
+    }
+    .equipoMK{
+            background-image: url(/img/img-personajes/esce-mk.jpg);
+            padding: 70px 10px;
+            text-align: center;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        
+        }
+    .equipoMK::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(20, 13, 13, 0.6);
+    }
+    .equipoSB{
+        background-image: url(/img/img-personajes/esce-smh.jpg);
+        padding: 70px 10px;
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    
+    }
+    
+.equipoSB::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(20, 13, 13, 0.6);
+}    
+.equipodbf{
+    background-image: url(/img/img-personajes/esce-dbf.jpg);
+    padding: 70px 10px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.equipodbf::before {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(20, 13, 13, 0.6);
+}
+.equipokof{
+    background-image: url(/img/img-personajes/esce-kof.jpg);
+    padding: 70px 10px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.equipokof::before {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(20, 13, 13, 0.6);
+}
+.equipoSF{
+    background-image: url(/img/img-personajes/esce-sf.jpg);
+    padding: 70px 10px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.equipoSF::before {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(20, 13, 13, 0.6);
+}
+.equipoMarvel{
+    background-image: url(/img/img-personajes/esce-marvel.png);
+    padding: 70px 10px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.equipoMarvel::before {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(20, 13, 13, 0.6);
+}
+.equipoNuns{
+    background-image: url(/img/img-personajes/esce-nus.jpg);
+    padding: 70px 10px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.equipoNuns::before {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(20, 13, 13, 0.6);
+}
+.equipoPokemon{
+    background-image: url(/img/img-personajes/esce-poke.jpg);
+    padding: 70px 10px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.equipoPokemon::before {
+content: '';
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(20, 13, 13, 0.6);
+}
+
+    .col{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
     }
     
     .lol {

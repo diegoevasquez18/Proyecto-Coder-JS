@@ -1,4 +1,4 @@
-alert("Bienvenido a la pestana equipos. Aceptar para continuar");
+//alert("Bienvenido a la pestana equipos. Aceptar para continuar");
 
 class campeon {
     constructor(game, id, name, type, pc){
@@ -49,9 +49,9 @@ console.log(campeonesMF);
 localStorage.setItem('campeonesMF', JSON.stringify(campeonesMF));
 
 
-function filtrado(player, type){
-    return filtrar = player.filter((campeon)=> campeon.type == (type));
-}
+/*/function filtrado(player, type){
+//    return filtrar = player.filter((campeon)=> campeon.type == (type));
+//}
 function listaCampeones(campeonesMF){
     let salida = '';
     for (const campeon of campeonesMF){
@@ -69,4 +69,22 @@ for(let i = 0; i <campeonesMF.length; i++){
     }
     break;
 }
+*/
+let btn = document.querySelectorAll(".btn");
+for(let i = 0; i <btn.length; i++){
+btn[i].addEventListener('click', event => {
+    alert("Selecciono a " + campeonesMF[i].name);
+  console.log(campeonesMF[i]);
 
+});}
+
+let cerrar = document.querySelector("#cerrar");
+let mostrar = document.querySelector("#mostrar");
+for(let i = 0; i <btn.length; i++){
+btn[i].addEventListener('click', ()=>{
+    mostrar.showModal();
+})}
+
+cerrar.addEventListener("click", ()=>{
+    mostrar.close();
+})

@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <title>Metaverse Fight</title>
 </head>
+
 <body>
     <header class="encabezado">
         <div class="imagenEncabezado">
             <h1 class="titulo">METAVERSE FIGHT</h1>
         </div>
-        </header>
+    </header>
     <nav class="menu">
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -22,51 +25,477 @@
         </ul>
     </nav>
     <br>
-    <section>
-        <div>
-            <h2>Eliga su duo de pelea</h2>
-            <p>Recuerde que cada universo tiene sus puntos de combate(PC), a mayor PC, mas probabilidades de ganar.</p>
-        </div>
+    <dialog id="mostrar">
+        <h3>BIENVENIDO AL COMBATE</h3>
+        <button id="cerrar"></button>
+    </dialog>
+    <div>
+        <h2>MORTAL KOMBAT</h2>
+    </div>
+    <div class="equipoMK">
 
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/scorpion.jpg" class="card-img-top" alt="scorpion">
+                    <div class="card-body">
+                        <h5 class="card-title">Scorpion</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="1" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: rango</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/sub-zero.jpg" class="card-img-top" alt="sub-zero">
+                    <div class="card-body">
+                        <h5 class="card-title">Sub-Zero</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="2" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/raiden.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Raiden</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="3" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: rango</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>SMASH BROS</h2>
+    </div>
+    <div class="equipoSB">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/mario.jpg" class="card-img-top" alt="scorpion">
+                    <div class="card-body">
+                        <h5 class="card-title">Mario</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="4" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/luigi.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Luigi</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="5" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/princesa.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Princesa Peach</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="6" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>Drabon ball FighterZ</h2>
+    </div>
+    <div class="equipodbf">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/Goku.jpg" class="card-img-top" alt="scorpion">
+                    <div class="card-body">
+                        <h5 class="card-title">Goku</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="8" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/vegeta.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vegeta</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="9" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/Freezer.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Freezer</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="10" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: rango</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>The King of Fighter</h2>
+    </div>
+    <div class="equipokof">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/kyo.jpg" class="card-img-top" alt="scorpion">
+                    <div class="card-body">
+                        <h5 class="card-title">Kyo</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="11" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/iori.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Iori</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="12" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: rango</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100" style="width: 16rem;">
+                    <img src="/img/img-personajes/rugal.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Rugal</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height action.</p>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="button" id="13" class="btn">Elegir</button>
+                        </div>
+                        <small class="text-muted">Tipo: rango</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
         <div>
-            <h3 class="red">Universo Mortal Kombat.PC=89</h3>
-            <p>Personajes: Scorpion(27), Subzero(30) y Raiden(32)</p> 
+            <h2>Street Fighter</h2>
+        </div>
+        <div class="equipoSF">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/ryu.jpg" class="card-img-top" alt="scorpion">
+                        <div class="card-body">
+                            <h5 class="card-title">Ryu</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="14" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: rango</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/chun-li.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Chun-Li</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="15" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/bison.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Bison</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="16" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: rango</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div>
-            <h3 class="blue">Universo Mario Smash.PC=86</h3>
-            <p>Personajes: Mario(32), Luigi(24) y Pincesa Peach(30)</p> 
+            <h2>Marvel</h2>
+        </div>
+        <div class="equipoMarvel">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/spider-man.png" class="card-img-top" alt="scorpion">
+                        <div class="card-body">
+                            <h5 class="card-title">Spider Man</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="17" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: rango</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/thanos.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Thanos</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="18" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/tormanta.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Tormenta</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="19" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: rango</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div>
-            <h3 class="green">Universo DB FighterZ.PC=92</h3>
-            <p>Personajes: Goku(35), Vegeta(32) y Freezer(25)</p> 
+            <h2>Naruto Ultimate Ninja Storm 4</h2>
+        </div>
+        <div class="equipoNuns">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/naruto.jpg" class="card-img-top" alt="scorpion">
+                        <div class="card-body">
+                            <h5 class="card-title">Naruto</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="20" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/sasuke.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Sasuke</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="21" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/kakashi.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Kakashi</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="22" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: rango</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div>
-            <h3 class="violet">Universo The King of Fighters.PC=87</h3>
-            <p>Personajes: Kyo(27), Iori(25) y Rugal(35)</p>
+            <h2>Pokemon</h2>
+        </div>
+        <div class="equipoPokemon">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/Bulbasaur.jpg" class="card-img-top" alt="scorpion">
+                        <div class="card-body">
+                            <h5 class="card-title">Bulbasaur</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="23" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: rango</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/squirtle.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Squirtle</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                                content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="24" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: rango</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 16rem;">
+                        <img src="/img/img-personajes/quaxly.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Quaxly</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This card has even longer content than the first to show that equal
+                                height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div>
+                                <button type="button" id="28" class="btn">Elegir</button>
+                            </div>
+                            <small class="text-muted">Tipo: cuerpo a cuerpo</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div>
-            <h3 class="blue">Universo Street Fighter. PC=88 </h3>
-            <p>Personajes: Ryu(29), Chun-Li(30) y Bison(29)</p>
+            <p>Tenga presente que el juego se actualiza y pueden variar los PC en cada parche.</p>
         </div>
-        <div>
-            <h3 class="red">Universo Marvel.PC=84</h3>
-            <p>Personajes: Spider-Man(25), Thanos(31) y Tormenta(28)</p>
-        </div>
-        <div>
-            <h3 class="green">Universo Naruto Shippuden: UNS4.PC=86</h3>
-            <p>Personajes: Naruto(29), Sasuke(30) y Kakashi(27)</p>
-        </div>
-        <div>
-            <h3 class="violet">Universo Pokemon.PC=89</h3>
-            <p>Personajes: Bulbasaur(27), Squirtle(30) y Quaxly(32)</p>
-        </div>
-        </div>
-    </section>
-    <p>Tenga presente que el juego se actualiza y pueden variar los PC en cada parche.</p>
-    <footer class="pie">
-        <h4> ALL RIGHT RESERVED. METAVERSE FIGHT &copy; JULIO 01 2022</h4>
-     </footer>
-     <script src="/js/equipos.js"></script>
+        <footer class="pie">
+                <h4> ALL RIGHT RESERVED. METAVERSE FIGHT &copy; JULIO 01 2022</h4>
+        </footer>
+        
+        <script src="/js/equipos.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
