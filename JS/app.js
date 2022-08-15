@@ -1,7 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //Constantes
 let campeones = await getCampeones();
-console.log(campeones);
 const cartContainer = document.querySelector("#cart");
 const contadorBolsa = document.querySelector("#cart-counter");
 const busqueda = document.getElementById("buscar");
@@ -13,7 +12,7 @@ document.querySelector("#pelear").addEventListener("click", pelear);
 
 
 async function getCampeones(){
-  let resp = await fetch ('/js/campeones.json')
+  let resp = await fetch ('js/campeones.json')
   let campeones = await resp.json()
   return campeones
 }
@@ -21,7 +20,6 @@ async function getCampeones(){
 //Cargar datos en html
 function cargarDatos(campeonesShow) {
   listaPersonajes.innerHTML = ""; 
-  console.log("entra");
   campeonesShow.forEach((campeon) =>{
      let cardNueva = document.createElement("div");
      cardNueva.innerHTML = ` 
@@ -154,10 +152,10 @@ const filtrado = async () => {
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //Limpiar la bolsa
 function limpiarBolsa() {
-     document.querySelector("#cart").innerHTML = "";
+     document.querySelector("#cart").innerHTML = 0;
      localStorage.setItem("Bolsa", "[]");
      document.querySelector("#cards").innerHTML = "";
-     cargarDatos();
+     cargarDatos(campeones);
    }
 
  //-----------------------------------------------------------------------------------------------------------------------------------------
@@ -165,7 +163,6 @@ function limpiarBolsa() {
  function pelear(){
  
    let rival = Math.floor(Math.random() * 10) + 18;
-   console.log(rival);
    total.innerHTML > rival ?   Swal.fire({
      title: 'HAS GANADO!',
      text: 'Espero tengas la misma suerte la proxima vez!',
