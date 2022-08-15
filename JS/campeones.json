@@ -1,0 +1,86 @@
+[
+  {
+    "nombre": "Scorpion",
+    "juego": "Mortal Kombat",
+    "id": 1,
+    "img": "https://www.ecured.cu/images/b/b6/43421bedcc481252906572ac4dff8ee0.jpg",
+    "pc": 6
+  },
+  {
+    "nombre": "Sub Zero",
+    "juego": "Mortal Kombat",
+    "id": 2,
+    "img": "https://i.pinimg.com/originals/a8/b9/20/a8b9207930bf26ee35e9fb36df03fc29.jpg",
+    "pc": 8
+  },
+  {
+    "nombre": "Raiden",
+    "juego": "Mortal Kombat",
+    "id": 3,
+    "img": "https://www.xtrafondos.com/descargar.php?id=3029&vertical=1",
+    "pc": 7
+  },
+  {
+    "nombre": "Ryu",
+    "juego": "Street Fighter",
+    "id": 4,
+    "img": "https://i.pinimg.com/originals/ac/51/3d/ac513df7c76aebd64be5b6172460c8ae.jpg",
+    "pc": 6
+  },
+  {
+    "nombre": "Ken",
+    "juego": "Street Fighter",
+    "id": 5,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu9NOkNGkldp4xMOUpmUkDVGZ3d7p15qKTr7igvZRjmSVxOZPVtmvsBxGWzyo4WLArtBo&usqp=CAU",
+    "pc": 8
+  },
+  {
+    "nombre": "Chun-li",
+    "juego": "Street Fighter",
+    "id": 6,
+    "img": "https://i.pinimg.com/736x/0f/f2/18/0ff2188fb058e12d52b07915c0c1d4b0--chun-li-fighting-games.jpg",
+    "pc": 9
+  },
+  {
+    "nombre": "Kyo",
+    "juego": "King Of Fighters",
+    "id": 7,
+    "img": "https://i.pinimg.com/originals/ea/6b/bf/ea6bbfc1bc8a66e6e3386313bcc85dcd.jpg",
+    "pc": 5
+  },
+  {
+    "nombre": "Iori",
+    "juego": "King Of Fighters",
+    "id": 8,
+    "img": "https://static.zerochan.net/Yagami.Iori.full.3313790.jpg",
+    "pc": 8
+  },
+  {
+    "nombre": "Rugal",
+    "juego": "King Of Fighters",
+    "id": 9,
+    "img": "https://www.kindpng.com/picc/m/11-115262_transparent-rugal-png-rugal-the-king-of-fighters.png",
+    "pc": 8
+  },
+  {
+    "nombre": "Spider Man",
+    "juego": "Marvel",
+    "id": 10,
+    "img": "https://i.kym-cdn.com/photos/images/original/001/954/695/b6e",
+    "pc": 5
+  },
+  {
+    "nombre": "Tormenta",
+    "juego": "Marvel",
+    "id": 11,
+    "img": "https://static.wikia.nocookie.net/poohadventures/images/c/c3/Storm_FB_Artwork_2.jpg",
+    "pc": 9
+  },
+  {
+    "nombre": "Thor",
+    "juego": "Marvel",
+    "id": 12,
+    "img": "https://i.pinimg.com/736x/38/22/cc/3822ccbeae7626f6897ca14858343e6d--thor-avengers-romulus.jpg",
+    "pc": 7
+  }
+]

@@ -1,0 +1,227 @@
+function crearCards(){
+  fetch('/js/campeones.json')
+  .then((res)=>res.json())
+  .then((data)=> {
+     data.forEach((campeon) =>{ 
+      console.log(campeon) 
+     campeones.push(campeon);//arreglo de obj json
+     let cardNueva = document.createElement("div");
+     cardNueva.innerHTML = ` 
+   <img src= ${campeon.img} class="card-img-top border" alt="...">
+   <h5 class="card-title" id="name">${campeon.nombre}</h5>
+   <div class="card-body text-center">
+     <p class="card-text">PC: ${campeon.pc}</p>
+     <button id="${campeon.id}" class="third add">Seleccionar<i class="fa in-card" aria-hidden="true"></i> </button>
+   </div>
+     `; 
+       
+     document.getElementById("cards").append(cardNueva); 
+ 
+     cardNueva.classList.add("card", "col-4", "m-3"); 
+   })
+  }).then(cargarBotones)
+ //Esperar a que se cargue el boton.
+ 
+ } 
+ function cargarBotones(){
+   const btns = document.querySelectorAll(".add");
+  for (const boton of btns) {
+    boton.addEventListener("click", agregarCampeon);
+  }
+ }
+ 
+ //Agregar al carrito:
+ 
+ const cartContainer = document.querySelector("#cart");
+ 
+ const contadorBolsa = document.querySelector("#cart-counter");
+ 
+ 
+ 
+ function agregarCampeon(e) {
+   //e.target.setAttribute("disabled", true); 
+   //e.target.innerHTML = "Agregado"; 
+   e.target.style.minWidth = "100px";
+   let campeonClickeado = campeones.find((item) => item.id == e.target.id);
+   let arrayLocal = JSON.parse(localStorage.getItem('Bolsa')) || [];;
+ 
+   arrayLocal.push(campeonClickeado);
+ 
+   localStorage.setItem("Bolsa", JSON.stringify(arrayLocal)); 
+ 
+   actualizarBolsa(arrayLocal);
+   actualizarBotones(arrayLocal);
+ }
+ 
+ function eliminarCampeon() {
+   let arrayLocal = JSON.parse(localStorage.getItem('Bolsa')) || [];;
+   let campeonEliminado = arrayLocal.find((item) => `#${item.id}` === this.id);
+   let selectId = campeonEliminado.id;
+   let btncampeon = document.getElementById(selectId);
+   document.getElementById(selectId).innerHTML = "Seleccionar";
+ 
+   btncampeon.disabled = false;
+  
+   let indiceDeCampeon = arrayLocal.indexOf(campeonEliminado); 
+ 
+   arrayLocal.splice(indiceDeCampeon, 1); 
+ 
+   localStorage.setItem("Bolsa", JSON.stringify(arrayLocal));
+ 
+   actualizarBolsa(arrayLocal);
+ }
+ 
+ function actualizarBolsa(local) {
+   cartContainer.innerHTML = "";
+   for (const campeonAgregado of local) {
+     cartContainer.innerHTML += ` <div class="d-flex justify-content-between align-items-center mt-3 p-4 items rounded border-bottom border-top" >
+     <img class="rounded border" src=${campeonAgregado.img} width="100">
+         <div class="ml-2"><span class="font-weight-bold d-block m-2">${campeonAgregado.nombre}</span><span class="d-block ml-5 font-weight-bold">PC:${campeonAgregado.pc}</span></div>
+         <div class="ml-2 rounded">
+         <span class="eliminar-item" id= "#${campeonAgregado.id}"><i class="fa fa-trash" aria-hidden="true"></i> </span>
+ </div>`;
+   }
+ 
+   let btnsEliminar = document.querySelectorAll(".eliminar-item");
+ 
+   for (const btn of btnsEliminar) {
+     btn.addEventListener("click", eliminarCampeon);
+   }
+ 
+   contadorBolsa.innerText = local.length; 
+ 
+   document.querySelector("#total").innerText = sumarTotal(local);
+ }
+ function actualizarBotones(local) {
+   const btns = document.querySelectorAll("button.third");
+ 
+   for (const item of local) {
+     for (const btn of btns) {
+       if (item.id == btn.id) {
+         let botonAdd = document.getElementById(`${item.id}`);
+         botonAdd.setAttribute("disabled", true); 
+         botonAdd.innerHTML = `<i class="fas fa-ban" aria-hidden="true">`;
+         botonAdd.style.minWidth = "120px"; 
+       }
+     }
+   }
+ }
+ 
+ //Sumar los PC
+ function sumarTotal(cart) {
+   let total = cart.reduce((acc, item) => acc + item.pc, 0);
+   return total;  
+ }
+ //ternario
+ 
+ ///Carga de la app:
+ 
+ crearCards();
+ 
+ let bolsaDeCampeones = JSON.parse(localStorage.getItem('Bolsa')) || [];; 
+ 
+ if (bolsaDeCampeones) {
+   actualizarBotones(bolsaDeCampeones);
+ 
+   actualizarBolsa(bolsaDeCampeones);
+ } else {
+   localStorage.setItem("Bolsa", "[]");
+ }
+ 
+ 
+ let campeones = [];
+ /*let buscador = document.querySelector("#buscar");
+ 
+ buscador.addEventListener('click', e => { 
+   if(campeones.length > 0){
+       let value = e.target.value;
+       let filtrados = campeones.filter(campeon =>campeon.name.includes());
+       if(filtrados.length > 0){
+           crearCards(filtrados);
+       }else{
+           crearCards(campeones);
+       }
+   }
+ });
+ 
+ 
+ */
+ //filterfigh
+ 
+function crearCard(campeon){
+  let cardNueva = document.createElement("div");
+     cardNueva.innerHTML = ` 
+   <img src= ${campeon.img} class="card-img-top border" alt="...">
+   <h5 class="card-title" id="name">${campeon.nombre}</h5>
+   <div class="card-body text-center">
+     <p class="card-text">PC: ${campeon.pc}</p>
+     <button id="${campeon.id}" class="third add">Seleccionar<i class="fa in-card" aria-hidden="true"></i> </button>
+   </div>
+     `; 
+       
+     document.getElementById("cards").append(cardNueva); 
+ 
+     cardNueva.classList.add("card", "col-4", "m-3"); 
+
+     cargarBotones()
+}
+
+ document.querySelector("button").addEventListener("click", function (e) {
+  e.preventDefault();
+ 
+ 
+ let busqueda = document.querySelector("input").value.toUpperCase();
+     if (busqueda.length > 1) {
+       let resultados = campeones.filter((item) => item.nombre.toUpperCase().includes(busqueda));
+       let tarjetas = document.querySelectorAll(".card");
+         tarjetas.forEach(tarjeta => {
+           tarjeta.remove();
+         });
+        if(!resultados[0]){
+          alert("Campeon no encontrado");
+          crearCards();
+        }
+        else{
+          crearCard(resultados[0]) }      
+       console.log(resultados);    
+     } else {
+       alert("ingresa mas caracteres");
+       crearCards();
+     }
+  });
+ 
+   document.querySelector("#clear").addEventListener("click", limpiarBolsa);
+ 
+   function limpiarBolsa() {
+     document.querySelector("#cart").innerHTML = "";
+   
+     localStorage.setItem("Bolsa", "[]");
+     document.querySelector("#cards").innerHTML = "";
+     crearCards();
+   }
+   document.querySelector("#pelear").addEventListener("click", pelear);
+ 
+ //Utilizo SweetAlert con el fin de mejorar la alerta de victoria o derrota, lo cual va a cambiar debido a que el numero de PC(puntos de combate) de los rivales es random.
+ 
+ function pelear(){
+ 
+   let rival = Math.floor(Math.random() * 10) + 18;
+   console.log(rival);
+   total.innerHTML > rival ?   Swal.fire({
+     title: 'HAS GANADO!',
+     text: 'Espero tengas la misma suerte la proxima vez!',
+     imageUrl: 'https://www.jeumobi.com/wp-content/uploads/2021/01/victory-wild-rift.jpg',
+     imageWidth: 400,
+     imageHeight: 200,
+     imageAlt: 'Custom image',
+   }) :   Swal.fire({
+     title: 'DERROTA!',
+     text: 'Mas suerte la proxima vez!',
+     imageUrl: 'https://img.playbuzz.com/image/upload/ar_1.5,c_pad,f_jpg,b_auto/cdn/6b2be942-0f17-4fa3-814b-c0bc58143dab/4d368f77-ab10-48b5-8ed9-4445ace93f35.jpg',
+     imageWidth: 400,
+     imageHeight: 200,
+     imageAlt: 'Custom image',
+   });
+ }
+ 
+ 

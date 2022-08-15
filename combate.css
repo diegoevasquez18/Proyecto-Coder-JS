@@ -1,0 +1,38 @@
+body {
+    background-color: #ededed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: black;
+  }
+
+.combate{
+    background-color: rgb(34, 46, 78);
+}
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    color: azure;
+  }
+
+.container-fluid{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#cards{
+  width: 40%;
+
+}
+#cards2{
+  width: 40%;
+
+}
+.pantallaCarga{
+  display: inline-table;
+  text-align: center;
+  margin-top: 20%;
+}

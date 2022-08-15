@@ -1,59 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Metaverse Fight</title>
-</head>
+    <title>MF</title>
+  </head>
 
-<body>
-    <header class="encabezado">
-        <div class="imagenEncabezado">
-            <h1 class="titulo">METAVERSE FIGHT</h1>
-        </div>
-        </div>
-    </header>
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="equipos.html">Equipos</a></li>
-            <li><a href="registrar.html">Registrate</a></li>
-        </ul>
+  <body>
+    <h1>METAVERSE FIGHT</h1>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <h1 class="navbar-brand">CONFORME SU EQUIPO DE 3 CAMPEONES!</h1>
+        <form class="d-flex">
+          <input id="buscar" class="form-control me-2 d-flex "type="text" placeholder="Search" aria-label="Search"/>        </form>
+        <i class="fa 	fas fa-users" aria-hidden="true"></i>
+        <span id="cart-counter">0</span>
+      </div>
     </nav>
-    <br>
-    <div class="containerNoti">
-        <section class="noticias">
-            <div class="noticiaUno">
-                <h2>ESTA LLEGANDO!</h2>
-                <p>Nuevo set de pelea "League Of Legends"</p>
-                <picture>
-                    <img class="lol" src="img/lol-noticia.jpg" alt="Personaje">
-                </picture>
-                <p>League of Legends viene para quedarse. Con Darius, Katarina, Ekko y Ahri las batallas del multiverso
-                    seran aun mas epicas!</p>
-            </div>
-            <div class="noticiaDos">
-                <h2>DISPONIBLE EN IOS Y ANDROID</h2>
-                <p>Registrate a la beta para jugar en dispositivo movil!</p>
-                <picture>
-                    <img class="lol" src="img/androidmac.jpg" alt="sistemasOperativos">
-                </picture>
-                <p>Estamos muy contentos en anunciar que proximamente llegara MF. a los dispositivos moviles!! Un trabajo muy arduo de nuestros desarrolladores, pero estamos a punto de terminarlo. Hace click <a href="#">aqui</a> para registrarte en la beta!</p>
-            </div>
-        </section>
-        </div>
-        <div class="coca">
-        <aside>
-            <img class="publicidad" src="/img/Redragon-y-Coca-Cola.jpg" alt="publicidad">
-        </aside>
-        </div>
-    <footer class="pie">
-       <h4> ALL RIGHT RESERVED. METAVERSE FIGHT &copy; JULIO 01 2022</h4>
-    </footer>
-    <script src="js/js.js"></script>
-</body>
 
+    <div id="tarjetas" class="container-fluid">
+      <div class="row d-flex justify-content-evenly" id="cards"></div>
+    </div>
+    <div class="side-bar-wrapper">
+      <div class="sidebar" id="side-bar">
+        <div class="cart-container text-center">
+          <span id="close-cart"
+            ><i class="fa fa-window-close" aria-hidden="true"></i
+          ></span>
+
+          <h3 class="cart">Bolsa</h3>
+          <div id="cart"></div>
+          <div id="bolsa" class="container-fluid text-center">
+            Total de PC: 
+            <div id="total">0</div>
+          </div>
+        </div>
+        <div class="cart-footer">
+          <button class="clear-cart btnLimpiar" id="clear">Cambiar equipo!</button>
+        </div>
+        <div class="cart-footer">
+          <button class="clear-cart btnPelear" id="pelear">Pelear</button>
+        </div>
+      </div>
+    </div>
+    <div class="form-check form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        role="switch"
+        id="toggle-theme"
+      />
+      <label class="form-check-label" for="toggle-theme">DarkMode</label>
+    </div>
+    <footer>
+      <div class="text-center">Metaverse Fight</div>
+    </footer>
+
+    <script src="JS/app.js" type="module"></script>
+    <script src="JS/animaciones.js"></script>
+    <script src="JS/darkMode.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+  </body>
 </html>
