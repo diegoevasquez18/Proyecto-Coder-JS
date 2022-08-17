@@ -12,7 +12,7 @@ document.querySelector("#pelear").addEventListener("click", pelear);
 
 
 async function getCampeones(){
-  let resp = await fetch ('js/campeones.json')
+  let resp = await fetch ('https://diegoevasquez18.github.io/Proyecto-Coder-JS/JS/campeones.json')
   let campeones = await resp.json()
   return campeones
 }
