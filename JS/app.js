@@ -4,6 +4,7 @@ let campeones = await getCampeones();
 const cartContainer = document.querySelector("#cart");
 const contadorBolsa = document.querySelector("#cart-counter");
 const busqueda = document.getElementById("buscar");
+const stop = document.getElementById("cart-counter");
 let listaPersonajes = document.getElementById("cards")
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //Listeners
@@ -103,6 +104,7 @@ function cargarDatos(campeonesShow) {
    contadorBolsa.innerText = local.length; 
  
    document.querySelector("#total").innerText = sumarTotal(local);
+  
  }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
@@ -135,9 +137,17 @@ function cargarDatos(campeonesShow) {
    actualizarBotones(bolsaDeCampeones);
  
    actualizarBolsa(bolsaDeCampeones);
+
  } else {
    localStorage.setItem("Bolsa", "[]");
  }
+
+function paraContador() {
+  if(stop > 3){
+    btns = disabled;
+  }
+}
+
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 //Filtro
@@ -153,6 +163,8 @@ const filtrado = async () => {
 //Limpiar la bolsa
 function limpiarBolsa() {
      document.querySelector("#cart").innerHTML = 0;
+     document.querySelector("#total").innerHTML = 0;
+     stop.innerHTML = 0;
      localStorage.setItem("Bolsa", "[]");
      document.querySelector("#cards").innerHTML = "";
      cargarDatos(campeones);
